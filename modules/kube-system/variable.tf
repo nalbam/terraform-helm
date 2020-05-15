@@ -1,10 +1,10 @@
 # variable
 
-variable "metrics_server" {
+variable "kube2iam" {
   default = true
 }
 
-variable "kube2iam" {
+variable "metrics_server" {
   default = true
 }
 
