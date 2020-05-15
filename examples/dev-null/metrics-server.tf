@@ -13,10 +13,9 @@ resource "helm_release" "this" {
   namespace = "kube-system"
   name      = "metrics-server"
 
-  set {
-    name  = "nameOverride"
-    value = "metrics-server"
-  }
+  values = [
+    file("./values/metrics-server.yaml")
+  ]
 
   set_string {
     name  = "args"
