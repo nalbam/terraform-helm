@@ -1,13 +1,19 @@
 # variable
 
-variable "metrics_server" {
-  default = true
+variable "chart_name" {
 }
 
-variable "kube2iam" {
-  default = true
+variable "chart_version" {
+  default = ""
 }
 
-variable "region" {
-  description = "The region to deploy the cluster in, e.g: us-east-1"
+variable "namespace" {
+  default = ""
+}
+
+variable "name" {
+}
+
+variable "values" {
+  default = {}
 }
