@@ -8,7 +8,7 @@ resource "helm_release" "this" {
   name      = var.name
 
   values = [
-    file("${path.module}/values/${var.namespace}/${var.name}.yaml")
+    file("./values/${var.namespace}/${var.name}.yaml")
   ]
 
   dynamic "set" {

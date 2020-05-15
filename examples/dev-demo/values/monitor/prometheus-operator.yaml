@@ -1,0 +1,23 @@
+nameOverride: prometheus-operator
+
+prometheusOperator:
+  createCustomResource: false
+
+prometheus:
+  prometheusSpec:
+    scrapeInterval: "30s"
+
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: "default"
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 50Gi
+
+grafana:
+  enabled: false
+
+kubeStateMetrics:
+  enabled: false

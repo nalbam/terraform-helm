@@ -1,7 +1,7 @@
 nameOverride: kube2iam
 
-# aws:
-#   region: AWS_REGION
+aws:
+  region: "ap-northeast-2"
 
 extraArgs:
   auto-discover-base-arn: true

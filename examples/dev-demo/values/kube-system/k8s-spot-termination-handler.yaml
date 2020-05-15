@@ -1,0 +1,10 @@
+nameOverride: k8s-spot-termination-handler
+
+clusterName: ""
+
+podAnnotations:
+  iam.amazonaws.com/role: ""
+
+detachAsg: false
+
+slackUrl: ""

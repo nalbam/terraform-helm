@@ -1,0 +1,25 @@
+nameOverride: prometheus
+
+server:
+  enabled: true
+  global:
+    scrape_interval: "30s"
+  persistentVolume:
+    enabled: false
+    storageClass: "default"
+    size: "8Gi"
+  podAnnotations:
+    cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+
+alertmanager:
+  enabled: true
+  persistentVolume:
+    enabled: false
+    storageClass: "default"
+    size: "2Gi"
+
+podSecurityPolicy:
+  enabled: true
+
+kubeStateMetrics:
+  enabled: false

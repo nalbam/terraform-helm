@@ -1,0 +1,24 @@
+nameOverride: cluster-autoscaler
+
+autoDiscovery:
+  enabled: true
+  clusterName: ""
+
+awsRegion: "ap-northeast-2"
+
+extraArgs:
+  v: 4
+  logtostderr: true
+  scale-down-enabled: true
+  scale-down-utilization-threshold: 0.5
+  skip-nodes-with-local-storage: false
+  skip-nodes-with-system-pods: false
+
+podAnnotations:
+  iam.amazonaws.com/role: ""
+
+sslCertPath: /etc/ssl/certs/ca-bundle.crt
+
+rbac:
+  create: true
+  pspEnabled: true
